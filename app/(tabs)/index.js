@@ -13,6 +13,8 @@ import { StatusBar } from "expo-status-bar";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { BlurView } from "expo-blur";
 import { useRef } from "react";
+import BinIcon from "../../assets/SVGS/bin";
+import EditIcon from "../../assets/SVGS/edit";
 
 function App() {
   const [todoList, setTodoList] = useState([]);
@@ -192,20 +194,23 @@ function App() {
                     onPress={() => handleModalVisible(itemObj.item.id)}
                   >
                     <View style={styles.todoEdit}>
-                      <Ionicons
+                      <EditIcon height={30} width={30} color="#D1C0A6" />
+                      {/* <Ionicons
                         name="create-outline"
                         size={28}
                         color="#D7C7AB"
-                      />
+                      /> */}
                     </View>
                   </Pressable>
                   <Pressable onPress={() => handleDeleteTodo(itemObj.item.id)}>
                     <View style={styles.todoDelete}>
-                      <Ionicons
+                      <BinIcon height={30} width={30} color="#D1C0A6" />
+
+                      {/* <Ionicons
                         name="trash-bin-outline"
                         size={28}
                         color="#D7C7AB"
-                      />
+                      /> */}
                     </View>
                   </Pressable>
                 </View>
